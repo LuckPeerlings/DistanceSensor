@@ -14,3 +14,7 @@ http://folk.uio.no/jeanra/Microelectronics/ArduinoWatchdog.html
 
 Another option could to make a barebone arduino clone
 https://hwstartup.wordpress.com/2013/03/06/how-to-build-a-5-arduino-clone/
+
+Some information on th 3.3V and 5V and some work rounds
+jeelabs.org/2010/12/16/voltage-3-3-vs-5/
+
