@@ -1,0 +1,16 @@
+First step is to circumvene the voltage regulator
+
+To reduce the power consumption of the arduino UNO, the voltage regulator can be bypassed by connecting a 5V power supply to 5V pin and GND2 pin.
+
+A possible power source for the 5V could be the LM2825N chip or the MIC5205
+
+http://www.instructables.com/id/Bluetooth-LE-Go-Anywhere-Sensor-Pack/step6/Optional-Bypass-Arduinos-On-Board-Regulator/
+
+Second step is to remove the power led light from the Arduino Uno
+
+Third step is to include sleep mode,
+Wake it up every 8 seconds, and then when a timer passes a certain value perform the measurement. More information can be found in this
+http://folk.uio.no/jeanra/Microelectronics/ArduinoWatchdog.html
+
+Another option could to make a barebone arduino clone
+https://hwstartup.wordpress.com/2013/03/06/how-to-build-a-5-arduino-clone/
