@@ -1,0 +1,26 @@
+//The simplest way to test the device is with Putty, because you can send special characters
+//Sometimes the codes do not work, I'm not sure if it is due to the power supply, or the long leads for the serial interface.
+
+//Check status, if it is 0, everything is correct. Most probably it isn't at this stage.
+AT+CPAS
+//Check Pin status
+AT=CPIN?
+//If return is SIM PIN, a PIN code has to be given to unlock sim card.
+//If needed unlock the sim with pin, where #PIN is the number
+AT+CPIN="#PIN"
+//Check the network status, it should be on zero for auto select
+AT+COPS?
+AT+COPS=0
+AT+COPS?
+//Check the signal strength, it should be aroumd 20-30
+AT+CSQ?
+//Set the sms input mode to text
+AT+CMGF?
+AT+CMGF=1
+// Set the character set to default alphabet
+AT+CSCS?
+AT+CSCS="GSM"
+//Send a message to the telephone number #NR
+//Upon sending the command, a prompt appears where a message can be typed. Type the message within double quotation marks, end it with the ctrl-z character.
+AT+CMGS="#NR"
+"Your message"<CTRL-Z>
