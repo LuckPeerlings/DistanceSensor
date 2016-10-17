@@ -18,3 +18,17 @@ https://hwstartup.wordpress.com/2013/03/06/how-to-build-a-5-arduino-clone/
 Some information on th 3.3V and 5V and some work rounds
 jeelabs.org/2010/12/16/voltage-3-3-vs-5/
 
+Power source
+Use mosfet to switch power to the ranging sensor and the GSM source. 
+Use a linear regulator to reduce the input voltage to 4.8V for the gsm and the ranging sensor
+Use a simple voltage divider to create a 3.3 reference voltage rail
+Use a low quiescent current switching regulator for to drive the arduino.
+LM2936 5V ultra low quiescent current LDO linear voltage regulator.
+http://www.ti.com/lit/ds/symlink/lm2936.pdf
+
+TPS76950DBVT 5V 15muA quiescent current 100mV drop out voltage
+LDO voltage regulator ≤ 5 V SOT-223-5, MCP1826T-ADJE/DC, Microchip
+
+LM1117 is a adjustable voltage regulator in TO-220 package for 12 crowns
+LM317
+DC DC boost convert could be an option
